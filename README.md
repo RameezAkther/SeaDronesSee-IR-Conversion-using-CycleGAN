@@ -171,7 +171,7 @@ The model was trained using the **Ultralytics Python API**, with all preprocessi
 
 The result graph is as follows
 
-![yolov8m_result](.\src\results.png)
+<img src="./src/results.png" alt="yolov8m_result">
 
 Some inferenced images are as follows
 
@@ -211,6 +211,7 @@ The resulting model can be deployed for **real-time surveillance tasks** using *
 4. **Ultralytics YOLOv8** – [https://github.com/ultralytics/ultralytics](https://github.com/ultralytics/ultralytics)
 
 ---
+
 
 
 
