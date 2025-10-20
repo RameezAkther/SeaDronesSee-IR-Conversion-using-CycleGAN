@@ -30,6 +30,18 @@ Thus, the final dataset contains only **two categories**:
 - `boat`
 - `person`
 
+Few images of the SeaDronesSee dataset is as follows
+
+<table>
+    <tr>
+    <td><img src="./src/seadronessee_dataset_sample_images/11493.jpg" alt="seadronessee1" width="200"></td>
+    <td><img src="./src/seadronessee_dataset_sample_images/16372.jpg" alt="seadronessee1" width="200"></td>
+    <tr>
+    <td><img src="./src/seadronessee_dataset_sample_images/4.jpg" alt="seadronessee1" width="200"></td>
+    <td><img src="./src/seadronessee_dataset_sample_images/5042.jpg" alt="seadronessee1" width="200"></td>
+    </tr>
+</table>
+
 ---
 
 ### 2. **Sampling Strategy**
@@ -96,16 +108,79 @@ The **notebook used for translation**:
 The **final IR-translated dataset** is available here:
 🔗 [SeaDronesSee IR Translated Dataset](https://www.kaggle.com/datasets/rameezakther/seadronessee-ir-translated-dataset)
 
+Some of the IR translated images is displayed below
+
+<table>
+    <tr>
+    <td><img src="src\sample_inference_data\11351.png" alt="seadronessee1" width="200"></td>
+    <td><img src="src\sample_inference_data\17466.png" alt="seadronessee1" width="200"></td>
+    <tr>
+    <td><img src="src\sample_inference_data\16231.png" alt="seadronessee1" width="200"></td>
+    <td><img src="src\sample_inference_data\49864.png" alt="seadronessee1" width="200"></td>
+    </tr>
+</table>
+
+---
+
+Perfect 👍 You can extend your report section to include the model configuration, training duration, and performance results in a professional **Markdown** format like this:
+
 ---
 
 ## Object Detection using YOLOv8
 
-Using the **Ultralytics YOLOv8m** model, training was conducted on the **IR-translated SeaDronesSee dataset** to detect:
+Using the **Ultralytics YOLOv8m** model, training was conducted on the **IR-translated SeaDronesSee dataset** to detect two target classes:
 
 - `boat`
 - `person`
 
-The model was trained using the **Ultralytics Python API**, and all preprocessing steps ensured compatibility with the 256×256 input dimensions.
+The model was trained using the **Ultralytics Python API**, with all preprocessing steps ensuring compatibility with the **256×256** input dimensions. The dataset used was the IR-translated version of the SeaDronesSee dataset, created using CycleGAN.
+
+### ⚙️ Training Configuration
+
+| Parameter              | Value                        |
+| ---------------------- | ---------------------------- |
+| **Model**              | YOLOv8m                      |
+| **Epochs**             | 100                          |
+| **Batch Size**         | 32                           |
+| **Image Size**         | 256×256                      |
+| **Optimizer**          | SGD (default in Ultralytics) |
+| **Learning Rate**      | 0.01 (default)               |
+| **Device**             | NVIDIA Tesla T4 (15GB VRAM)  |
+| **Framework**          | Ultralytics YOLOv8.3.217     |
+| **Python Version**     | 3.12.12                      |
+| **PyTorch Version**    | 2.8.0+cu126                  |
+| **Parameters (total)** | 25,840,918                   |
+| **Layers**             | 92                           |
+
+### Training Results
+
+| Metric            | `all` | `person` | `boat` |
+| :---------------- | :---: | :------: | :----: |
+| **Precision (P)** | 0.764 |  0.786   | 0.742  |
+| **Recall (R)**    | 0.898 |  0.858   | 0.938  |
+| **mAP@0.5**       | 0.828 |  0.828   | 0.828  |
+| **mAP@0.5:0.95**  | 0.519 |  0.392   | 0.645  |
+
+**Total validation images:** 1,574
+**Total instances detected:** 11,936
+**Inference speed:** ~2.1 it/s
+**Post-processing time:** ~1.5 ms per image
+
+The result graph is as follows
+
+![yolov8m_result](runs\train\results.png)
+
+Some inferenced images are as follows
+
+<table>
+    <tr>
+    <td><img src="custom_predictions\11351.png" alt="seadronessee1" width="200"></td>
+    <td><img src="custom_predictions\17466.png" alt="seadronessee1" width="200"></td>
+    <tr>
+    <td><img src="custom_predictions\16231.png" alt="seadronessee1" width="200"></td>
+    <td><img src="custom_predictions\49864.png" alt="seadronessee1" width="200"></td>
+    </tr>
+</table>
 
 ---
 
