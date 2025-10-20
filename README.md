@@ -125,10 +125,6 @@ Some of the IR translated images is displayed below
 
 ---
 
-Perfect 👍 You can extend your report section to include the model configuration, training duration, and performance results in a professional **Markdown** format like this:
-
----
-
 ## Object Detection using YOLOv8
 
 Using the **Ultralytics YOLOv8m** model, training was conducted on the **IR-translated SeaDronesSee dataset** to detect two target classes:
@@ -211,6 +207,7 @@ The resulting model can be deployed for **real-time surveillance tasks** using *
 4. **Ultralytics YOLOv8** – [https://github.com/ultralytics/ultralytics](https://github.com/ultralytics/ultralytics)
 
 ---
+
 
 
 
