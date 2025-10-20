@@ -74,6 +74,9 @@ A total of **2000 training images** were used from the training folders of both 
 The **CycleGAN training notebook** is available here:
 🔗 [CycleGAN RGB2IR Training on Kaggle](https://www.kaggle.com/code/rameezakther/cycle-gan-rgb2ir-training)
 
+The trained model is availabe here:
+🔗 [CycleGAN RGB2IR Trained Model](https://www.kaggle.com/models/rameezakther/cycle-gan-for-rgb2ir/)
+
 The **CycleGAN implementation** was adapted from the official repository:
 🔗 [junyanz/pytorch-CycleGAN-and-pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
 
@@ -182,6 +185,9 @@ Some inferenced images are as follows
     </tr>
 </table>
 
+The trained model is availabe here:
+🔗 [YoloV8m Trained Model]([https://www.kaggle.com/models/rameezakther/cycle-gan-for-rgb2ir/](https://www.kaggle.com/models/rameezakther/yolov8m-model-trained-on-ir-seadronessee-dataset))
+
 ---
 
 ## Summary
@@ -205,3 +211,4 @@ The resulting model can be deployed for **real-time surveillance tasks** using *
 4. **Ultralytics YOLOv8** – [https://github.com/ultralytics/ultralytics](https://github.com/ultralytics/ultralytics)
 
 ---
+
