@@ -171,7 +171,7 @@ The model was trained using the **Ultralytics Python API**, with all preprocessi
 
 The result graph is as follows
 
-![yolov8m_result](runs\train\results.png)
+![yolov8m_result](src\results.png)
 
 Some inferenced images are as follows
 
@@ -186,7 +186,7 @@ Some inferenced images are as follows
 </table>
 
 The trained model is availabe here:
-🔗 [YoloV8m Trained Model]([https://www.kaggle.com/models/rameezakther/cycle-gan-for-rgb2ir/](https://www.kaggle.com/models/rameezakther/yolov8m-model-trained-on-ir-seadronessee-dataset))
+🔗 [YoloV8m Trained Model](https://www.kaggle.com/models/rameezakther/cycle-gan-for-rgb2ir/](https://www.kaggle.com/models/rameezakther/yolov8m-model-trained-on-ir-seadronessee-dataset)
 
 ---
 
@@ -211,4 +211,5 @@ The resulting model can be deployed for **real-time surveillance tasks** using *
 4. **Ultralytics YOLOv8** – [https://github.com/ultralytics/ultralytics](https://github.com/ultralytics/ultralytics)
 
 ---
+
 
